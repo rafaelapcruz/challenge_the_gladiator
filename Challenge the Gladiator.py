@@ -24,7 +24,12 @@ def place_gladiator():
 # 2. PLACE THE PLAYER IN THE ARENA
 
 def call_input(dimension):
-    return float(input("Indicate your %s positioning in the arena: " % dimension))
+    while True:
+        try:
+            return float(input("Indicate your %s positioning in the arena: " % dimension))
+        except ValueError:
+            print("Something went wrong. Choose a number between 0 and 5.")
+
 
 def place_player():
     print("The arena has a 5 x 5 meters area. You have to chose your position within these dimensions.")
