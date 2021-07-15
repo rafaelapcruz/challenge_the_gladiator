@@ -26,20 +26,19 @@ def place_gladiator():
 def call_input(dimension):
     while True:
         try:
-            return float(input("Indicate your %s positioning in the arena: " % dimension))
+            pos = float(input("Indicate your %s positioning in the arena: " % dimension))
+            if pos < 0 or pos > X_ARENA:
+                print("Please choose a position within the dimensions of the arena. Input a number between 0 and 5.")
+            else:
+                return pos
         except ValueError:
-            print("Something went wrong. Choose a number between 0 and 5.")
+            print("Something went wrong. Please input a number between 0 and 5.")
 
 
 def place_player():
-    print("The arena has a 5 x 5 meters area. You have to chose your position within these dimensions.")
+    print("The arena has a 5 x 5 meters area. You have to choose your position within these dimensions.")
     x_player = call_input("horizontal")
-    while x_player < 0 or x_player > X_ARENA:
-        x_player = call_input("horizontal")
-
     y_player = call_input("vertical")
-    while y_player < 0 or y_player > Y_ARENA:
-        y_player = call_input("vertical")
 
     return {
         "X": x_player,
