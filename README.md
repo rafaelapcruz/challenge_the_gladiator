@@ -1,8 +1,7 @@
 # Challenge the Gladiator
-Fighting game in Python!
+This is a PvE game in Python! The game is based on positioning the Gladiator (at random) and the player (asking the player for input) and checking after each round if the player survived, died or killer the Gladiator.
 
-Final project for Python course from "As Raparigas do Código".
-This exercise is a good resume of the programming concepts taught during the Python course.
+This is the final project for the Python course from "As Raparigas do Código". This exercise is a good summary of the programming concepts taught during the Python course.
 
 ### Instructions (PT):
 
